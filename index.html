@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quase Lá ❤️</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="background-glow"></div>
+
+  <div class="container">
+
+    <section id="home" class="screen active">
+      <div class="glass-card home-card">
+        <div class="tag">joguinho oficialmente suspeito</div>
+
+        <h1>Quase Lá... ❤️</h1>
+
+        <p>Tenho uma surpresa pra você.</p>
+        <p>Só que eu não vou facilitar tanto assim 😌</p>
+
+        <button onclick="startGame()">
+          Aceitar o desafio
+        </button>
+      </div>
+    </section>
+
+    <section id="game" class="screen">
+
+      <div class="game-header">
+
+        <h2 id="phaseTitle">Fase 1</h2>
+
+        <div class="status">
+          <span>Pontos: <b id="score">0</b></span>
+          <span>Tempo: <b id="timer">30</b>s</span>
+        </div>
+
+        <div class="bar">
+          <div id="progress"></div>
+        </div>
+
+        <p id="tipText"></p>
+
+      </div>
+
+      <div id="gameArea"></div>
+
+    </section>
+
+    <section id="message" class="screen">
+      <div class="glass-card">
+
+        <h2 id="messageTitle"></h2>
+
+        <p id="messageText"></p>
+
+        <button id="messageBtn"></button>
+
+      </div>
+    </section>
+
+    <section id="patience" class="screen">
+
+      <div class="glass-card">
+
+        <div class="tag">
+          teste de paciência
+        </div>
+
+        <h2>
+          Agora segura esse botão 😇
+        </h2>
+
+        <p id="patienceText"></p>
+
+        <div class="hold-bar">
+          <div id="holdProgress"></div>
+        </div>
+
+        <button id="holdBtn">
+          Segurar aqui
+        </button>
+
+      </div>
+
+    </section>
+
+    <section id="loading" class="screen">
+
+      <div class="glass-card">
+
+        <div class="tag">
+          processando sentimentos
+        </div>
+
+        <h2>
+          Preparando sua surpresa...
+        </h2>
+
+        <div class="loadingBar">
+          <div id="loadingProgress"></div>
+        </div>
+
+        <h1 id="loadingPercent">0%</h1>
+
+        <p id="loadingText"></p>
+
+      </div>
+
+    </section>
+
+    <section id="password" class="screen">
+
+      <div class="glass-card">
+
+        <div class="tag">
+          última barreira
+        </div>
+
+        <h2>
+          Digite a senha 🔐
+        </h2>
+
+        <p id="passwordText"></p>
+
+        <input
+          id="passwordInput"
+          placeholder="Digite qualquer coisa..."
+        >
+
+        <button onclick="checkPassword()">
+          Confirmar
+        </button>
+
+      </div>
+
+    </section>
+
+    <section id="final" class="screen final-screen">
+
+      <div class="final-card">
+
+        <div class="moon">🌙</div>
+
+        <h1 class="bigHeart">❤️</h1>
+
+        <p id="storyText"></p>
+
+        <button
+          id="nextFinalBtn"
+          onclick="nextFinalMessage()"
+          class="hidden">
+
+          Continuar
+
+        </button>
+
+        <button
+          id="restartBtn"
+          onclick="restartGame()"
+          class="hidden">
+
+          Jogar de novo ❤️
+
+        </button>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

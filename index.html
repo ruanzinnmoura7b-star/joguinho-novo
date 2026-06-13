@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo para minha chatinha ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-gradient"></div>
+  <div class="stars" id="stars"></div>
+
+  <div class="container">
+
+    <!-- HOME -->
+    <section id="home" class="screen active">
+      <div class="card">
+        <div class="tag">feito pra você, Ray</div>
+        <h1>Quase lá...</h1>
+        <p>Fiz uma coisa pra você.</p>
+        <p>Mas não vou entregar de mão beijada — isso não seria divertido.</p>
+        <button onclick="startGame()">Tudo bem, pode começar</button>
+      </div>
+    </section>
+
+    <!-- JOGO -->
+    <section id="game" class="screen">
+      <div class="game-header">
+        <div class="phase-label" id="phaseLabel">Fase 1 de 2</div>
+        <h2 id="phaseTitle">Pega os corações</h2>
+        <div class="status">
+          <span>Pontos: <b id="score">0</b></span>
+          <span>Tempo: <b id="timer">30</b>s</span>
+        </div>
+        <div class="bar">
+          <div id="progress"></div>
+        </div>
+        <p id="tipText"></p>
+      </div>
+      <div id="gameArea"></div>
+    </section>
+
+    <!-- MENSAGEM ENTRE FASES -->
+    <section id="message" class="screen">
+      <div class="card">
+        <h2 id="messageTitle"></h2>
+        <p id="messageText"></p>
+        <button id="messageBtn"></button>
+      </div>
+    </section>
+
+    <!-- PACIÊNCIA -->
+    <section id="patience" class="screen">
+      <div class="card">
+        <div class="tag">fase 3</div>
+        <h2>Agora segura esse botão</h2>
+        <p id="patienceText">Segure até completar. Se soltar, regride um pouco.</p>
+        <div class="hold-bar">
+          <div id="holdProgress"></div>
+        </div>
+        <button id="holdBtn">Segurar</button>
+      </div>
+    </section>
+
+    <!-- LOADING -->
+    <section id="loading" class="screen">
+      <div class="card">
+        <div class="tag">processando</div>
+        <h2>Preparando sua surpresa...</h2>
+        <div class="loadingBar">
+          <div id="loadingProgress"></div>
+        </div>
+        <div class="loading-percent" id="loadingPercent">0%</div>
+        <p id="loadingText"></p>
+      </div>
+    </section>
+
+    <!-- SENHA -->
+    <section id="password" class="screen">
+      <div class="card">
+        <div class="tag">última barreira</div>
+        <h2>Uma senha. Só uma.</h2>
+        <p id="passwordText">Talvez nem exista. Quem sabe.</p>
+        <input id="passwordInput" placeholder="Tente aí..." />
+        <button onclick="checkPassword()">Confirmar</button>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" class="screen final-screen">
+      <div class="final-card">
+        <span class="moon">🌙</span>
+        <span class="bigHeart">❤️</span>
+        <p id="storyText"></p>
+        <button id="nextFinalBtn" onclick="nextFinalMessage()" class="hidden">Continuar</button>
+        <button id="restartBtn" onclick="restartGame()" class="hidden">Jogar de novo</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
